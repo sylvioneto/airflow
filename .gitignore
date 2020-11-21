@@ -1,3 +1,5 @@
 logs
 *.cfg
 *.db
+airflow-home/home
+*.pid
