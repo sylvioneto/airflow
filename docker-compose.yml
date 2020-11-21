@@ -7,13 +7,19 @@ services:
       - ./airflow-home:/opt/airflow
   webserver:
     image: apache/airflow:1.10.12-python3.7
+    deploy:
+      replicas: 1
     command: webserver
+    ports:
+      - 8080:8080
     volumes:
       - ./airflow-home:/opt/airflow
     depends_on:
       - initdb
   scheduler:
     image: apache/airflow:1.10.12-python3.7
+    deploy:
+      replicas: 1
     command: scheduler
     volumes:
       - ./airflow-home:/opt/airflow
