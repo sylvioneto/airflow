@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  initdb:
+    image: apache/airflow:1.10.12-python3.7
+    command: initdb
+    volumes:
+      - ./airflow-home:/opt/airflow
+  webserver:
+    image: apache/airflow:1.10.12-python3.7
+    command: webserver
+    volumes:
+      - ./airflow-home:/opt/airflow
+    depends_on:
+      - initdb
+  scheduler:
+    image: apache/airflow:1.10.12-python3.7
+    command: scheduler
+    volumes:
+      - ./airflow-home:/opt/airflow
+    depends_on:
+      - initdb
