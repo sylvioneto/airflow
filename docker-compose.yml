@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 services:
   initdb:
     image: apache/airflow:1.10.12-python3.7
@@ -7,9 +7,10 @@ services:
       - ./airflow-home:/opt/airflow
   webserver:
     image: apache/airflow:1.10.12-python3.7
+    command: webserver
     deploy:
       replicas: 1
-    command: webserver
+    env_file: ./airflow-home/common.env
     ports:
       - 8080:8080
     volumes:
@@ -18,9 +19,13 @@ services:
       - initdb
   scheduler:
     image: apache/airflow:1.10.12-python3.7
+    command: scheduler
     deploy:
       replicas: 1
-    command: scheduler
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    env_file: ./airflow-home/common.env
     volumes:
       - ./airflow-home:/opt/airflow
     depends_on:
