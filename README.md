@@ -14,3 +14,7 @@ This repo has an Airflow instance to run locally with Docker compose.
    $ docker-compose up
    ```
 3. Access Airflow UI: http://localhost:8080/
+
+## Airflow versions
+The `docker-compose.yaml` is set with the latest stable Airflow version.  
+If you want to run another Airflow version, please change the image tag.
