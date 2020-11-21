@@ -2,7 +2,7 @@
 This repo has an Airflow instance to run locally with Docker compose.
 
 ## Pre requisites
-- Docker 19.03.13
+- [Docker](https://www.docker.com/products/docker-desktop) 19.03.13 or higher.
 
 ## Running
 1. Clone this repo
