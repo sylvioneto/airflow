@@ -1,7 +1,8 @@
 # airflow
-Use this repo to run an Airflow cluster locally with Docker compose.
+Use this repo to run an Airflow cluster locally with Docker compose.  
+It's useful for dags development and troubleshooting plugins before pushing them to shared environments.
 
-## Pre requisites
+## Prerequisites
 - [Docker](https://www.docker.com/products/docker-desktop) 19.03.13 or higher.
 
 ## Running
