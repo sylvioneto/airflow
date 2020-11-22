@@ -12,7 +12,7 @@ wait_for_it $DB_HOST $DB_PORT
 
 #!/bin/bash
 if [ $1 = "scheduler" ]; then
-    airflow initdb
+    airflow db init
 fi
 
 airflow $1

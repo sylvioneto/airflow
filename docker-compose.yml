@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   webserver:
-    image: apache/airflow:1.10.12-python3.7
+    image: apache/airflow:2.0.0b3-python3.7
     entrypoint: bash
     command: /opt/airflow/startup.bash webserver
     deploy:
@@ -18,7 +18,7 @@ services:
     networks:
       - airflow
   scheduler:
-    image: apache/airflow:1.10.12-python3.7
+    image: apache/airflow:2.0.0b3-python3.7
     entrypoint: bash
     command: /opt/airflow/startup.bash scheduler
     deploy:
