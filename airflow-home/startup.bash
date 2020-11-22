@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o
+
 # wait function
 function wait_for_it {
     while ! nc -zv $1 $2; do
