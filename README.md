@@ -14,7 +14,7 @@ It's useful for dags development and troubleshooting plugins before pushing them
    ```shell
    $ docker-compose up
    ```
-3. Access Airflow UI: http://localhost:8080/
+3. Access Airflow UI: http://localhost:8080/, User/Pass=admin/admin
 
 ## Airflow versions
 The `docker-compose.yaml` is set with the latest stable Airflow version.  
