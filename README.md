@@ -19,3 +19,6 @@ It's useful for dags development and troubleshooting plugins before pushing them
 ## Airflow versions
 The `docker-compose.yaml` is set with the latest stable Airflow version.  
 If you want to run another Airflow version, please change the image tag.
+
+### Airflow 2
+Want to play with Airflow 2? Checkout [this branch](https://github.com/sylvioneto/airflow/tree/airflow-2-tests).
