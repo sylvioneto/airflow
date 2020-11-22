@@ -13,7 +13,7 @@ wait_for_it $DB_HOST $DB_PORT
 #!/bin/bash
 if [ $1 = "scheduler" ]; then
     airflow db init
-    airflow create_user --role Admin --username admin --firstname Admin --lastname Default --email admin@myorg.com
+    airflow users create --role Admin --username admin --firstname Admin --lastname Default --email admin@myorg.com
 fi
 
 airflow $1
