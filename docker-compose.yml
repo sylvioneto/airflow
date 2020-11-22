@@ -33,16 +33,15 @@ services:
     networks:
       - airflow
   localdb:
-    image: mysql:8
+    image: postgres:13
     ports:
-      - 3306:3306
+      - 5432:5432
     environment:
-      - MYSQL_ROOT_PASSWORD=root123
-      - MYSQL_DATABASE=airflow
-      - MYSQL_USER=airflow
-      - MYSQL_PASSWORD=airflow123
+      - POSTGRES_DB=airflow
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow123
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./postgresql:/var/lib/postgresql/data
     networks:
       - airflow
 networks:

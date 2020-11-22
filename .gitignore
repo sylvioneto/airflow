@@ -4,4 +4,5 @@ logs
 airflow-home/home
 *.pid
 *.pyc
-mysql/data
+mysql
+postgresql
