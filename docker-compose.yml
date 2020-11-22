@@ -43,7 +43,7 @@ services:
       - MYSQL_PASSWORD=airflow123
     volumes:
       - ./mysql/data:/var/lib/mysql
-      - ./mysql/config:/my/custom:/etc/mysql/conf.d
+      - ./mysql/config:/etc/mysql/conf.d
     networks:
       - airflow
 networks:
